@@ -1,12 +1,13 @@
-package main
+package tools
 
 import (
 	"encoding/json"
 	"log"
+
 )
 
-func gatherDataUp() []artistInfo {
-	data1 := myArtist() // data1 has a value of getData function
+func GatherDataUp() []artistInfo {
+	data1 := MyArtist() // data1 has a value of getData function
 	// slices the artistData from any value, assign that to artist
 	er := json.Unmarshal(data1, &Artists) // convert the data1 and pointed artists through json into a variable
 	if er != nil {
@@ -24,8 +25,8 @@ func gatherDataUp() []artistInfo {
 	return Artists // return artist result
 }
 
-func gatherDataUpRelation() []relation {
-	data1 := myDatesLocations()
+func GatherDataUpRelation() []relation {
+	data1 := MyDatesLocations()
 
 	er := json.Unmarshal(data1, &dataLocation)
 	if er != nil {
@@ -42,8 +43,8 @@ func gatherDataUpRelation() []relation {
 	return dataLocation.Index
 }
 
-func gatherDataUpDates() []date {
-	data1 := myDates()
+func GatherDataUpDates() []date {
+	data1 := MyDates()
 
 	er := json.Unmarshal(data1, &eventDates)
 	if er != nil {
@@ -60,8 +61,8 @@ func gatherDataUpDates() []date {
 	return eventDates.Index
 }
 
-func gatherDataUpLocations() []location {
-	data1 := myLocations()
+func GatherDataUpLocations() []location {
+	data1 := MyLocations()
 
 	er := json.Unmarshal(data1, &eventLocations)
 	if er != nil {

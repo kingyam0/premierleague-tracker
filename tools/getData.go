@@ -1,4 +1,4 @@
-package main
+package tools
 
 import (
 	"io/ioutil"
@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func myArtist() []byte {
+func MyArtist() []byte {
 	data1, e1 := http.Get("https://groupietrackers.herokuapp.com/api/artists") // requests data from the link server
 	if e1 != nil {
 		log.Fatal(e1)
@@ -22,7 +22,7 @@ func myArtist() []byte {
 	return data2 // else return the read data that had been requested
 }
 
-func myDates() []byte {
+func MyDates() []byte {
 	data1, e1 := http.Get("https://groupietrackers.herokuapp.com/api/dates")
 	if e1 != nil {
 		log.Fatal(e1)
@@ -38,7 +38,7 @@ func myDates() []byte {
 	return data2
 }
 
-func myLocations() []byte {
+func MyLocations() []byte {
 	data1, e1 := http.Get("https://groupietrackers.herokuapp.com/api/locations")
 	if e1 != nil {
 		log.Fatal(e1)
@@ -54,7 +54,7 @@ func myLocations() []byte {
 	return data2
 }
 
-func myDatesLocations() []byte {
+func MyDatesLocations() []byte {
 	data1, e1 := http.Get("https://groupietrackers.herokuapp.com/api/relation")
 	if e1 != nil {
 		log.Fatal(e1)

@@ -1,4 +1,4 @@
-package main
+package tools
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-func response(w http.ResponseWriter, r *http.Request) {
+func Response(w http.ResponseWriter, r *http.Request) {
 	temp, er := template.ParseFiles("docs/templates/response.html")
 	if er != nil {
 		log.Fatal(er)

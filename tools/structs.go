@@ -1,4 +1,4 @@
-package main
+package tools
 
 type errorData struct {
 	Num  int
@@ -61,3 +61,21 @@ type locationremoveindex struct {
 type relationremoveindex struct {
 	Index []relation `json:"index"`
 }
+
+var (
+	FullArtistInfo    []artistInfo2
+	Articles          []artistInfo
+	locations         []location
+	Dates             []date
+	DatesLocations    []relation
+	DateswithIndex    dateremoveindex
+	RelationwithIndex relationremoveindex
+	LocationWithIndex locationremoveindex
+)
+
+var (
+	eventLocations locationremoveindex
+	eventDates     dateremoveindex
+	Artists        []artistInfo
+	dataLocation   relationremoveindex
+)

@@ -1,4 +1,4 @@
-package main
+package tools
 
 func getArtistID(id int) artistInfo2 {
 	var artistnotfound artistInfo2

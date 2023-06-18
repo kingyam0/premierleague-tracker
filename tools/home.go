@@ -1,13 +1,14 @@
-package main
+package tools
 
 import (
+	"./tools"
 	"html/template"
 	"log"
 	"net/http"
 )
 
 // handles all request to root URL
-func homePage(w http.ResponseWriter, r *http.Request) {
+func HomePage(w http.ResponseWriter, r *http.Request) {
 	// parses the HTML Files, and then Execute it
 	temp, err := template.ParseFiles("docs/templates/index.html")
 	if err != nil {
@@ -21,7 +22,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 	}
 	// ranging through struct artistInfo to gather data withins
 	var result []artistInfo2
-	result = FullArtistInfo
+	result = tools.FullArtistInfo
 	if err := temp.Execute(w, result); err != nil {
 		log.Printf("Execute Error: %v", err)
 		http.Error(w, "Error when Executing", http.StatusInternalServerError)

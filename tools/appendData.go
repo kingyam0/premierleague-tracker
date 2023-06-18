@@ -1,7 +1,11 @@
-package main
+package tools
+
+import (
+	"./tools"
+)
 
 // appends all info in our 2nd struct into one variable
-func appendalldata() []artistInfo2 {
+func AppendAllData() []artistInfo2 {
 	for i := range Articles {
 		var appendingdata artistInfo2
 		appendingdata.ID = i + 1
@@ -13,7 +17,7 @@ func appendalldata() []artistInfo2 {
 		appendingdata.DatesLocations = dataLocation.Index[i].DatesLocations
 		appendingdata.Locations = eventLocations.Index[i].Locations
 		appendingdata.Concerts = eventDates.Index[i].Dates
-		FullArtistInfo = append(FullArtistInfo, appendingdata)
+		tools.FullArtistInfo = append(FullArtistInfo, appendingdata)
 
 	}
 	// fmt.Println("----------------", FullArtistInfo[0])
