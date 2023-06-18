@@ -2,10 +2,9 @@
 
 
 
-🄶🅁🄾🅄🄿🄸🄴 - 🅃🅁🄰🄲🄺🄴🅁
+P R E M I E R L E A G U E - T R A C K E R
 
-Team (Authors):
-Nathan
+(Project Author):
 Kingsley
 
  Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
