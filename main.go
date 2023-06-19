@@ -1,9 +1,11 @@
 package main
 
 import (
-	"./tools"
+	// "./tools"
 	"log"
 	"net/http"
+
+	"premierleague-tracker/tools"
 )
 
 // Entry point to our REST server
@@ -14,7 +16,7 @@ func main() {
 	// declaring variables for fucntions to be called
 	tools.Articles = tools.GatherDataUp()
 	tools.Dates = tools.GatherDataUpDates()
-	tools.locations = tools.GatherDataUpLocations()
+	tools.Locations = tools.GatherDataUpLocations()
 	tools.DatesLocations = tools.GatherDataUpRelation()
 	tools.AppendAllData()
 

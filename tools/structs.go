@@ -65,7 +65,7 @@ type relationremoveindex struct {
 var (
 	FullArtistInfo    []artistInfo2
 	Articles          []artistInfo
-	locations         []location
+	Locations         []location
 	Dates             []date
 	DatesLocations    []relation
 	DateswithIndex    dateremoveindex
