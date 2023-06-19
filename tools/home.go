@@ -1,7 +1,6 @@
 package tools
 
 import (
-	"./tools"
 	"html/template"
 	"log"
 	"net/http"
@@ -22,7 +21,7 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
 	}
 	// ranging through struct artistInfo to gather data withins
 	var result []artistInfo2
-	result = tools.FullArtistInfo
+	result = FullArtistInfo
 	if err := temp.Execute(w, result); err != nil {
 		log.Printf("Execute Error: %v", err)
 		http.Error(w, "Error when Executing", http.StatusInternalServerError)
