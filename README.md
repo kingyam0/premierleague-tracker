@@ -10,8 +10,8 @@ Kingsley
  Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
 
 
-Starting the Server [localhost:8080]
-# By typing in terminal "go run main.go or go run ."
+# Starting the Server [localhost:8080]
+By typing in terminal "go run main.go or go run ."
 
 Usage
 Endpoints:
@@ -20,8 +20,9 @@ Endpoints:
 
 "/response" POST
 
-To Do:
-# It will be given an API, that consists in four parts:
+# To Do:
+
+It will be given an API that consists in four parts:
 
 . The first one, teams containing information about some players like their name(s), image off teams or players, in which year they began they signed, the date of their first fixture and goal.
 

@@ -23,7 +23,7 @@ func main() {
 	http.Handle("/docs/", http.StripPrefix("/docs/", fs))
 
 	// starting our server
-	log.Println("Starting Server :10001")
-	err := http.ListenAndServe(":10001", nil)
+	log.Println("Starting Server :8080")
+	err := http.ListenAndServe(":8080", nil)
 	log.Fatal(err)
 }
